@@ -28,27 +28,9 @@ export function WhatNext() {
           04 &mdash; What{"'"}s next
         </p>
 
-        <h2
-          className={`mb-8 font-serif text-[clamp(2rem,5vw,4.5rem)] leading-[1.05] font-light text-primary transition-all duration-1000 delay-100 ${
-            isVisible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"
-          }`}
-        >
-          <span className="text-balance">
-            I still think about India constantly.
-          </span>
-        </h2>
-
-        <p
-          className={`mb-16 max-w-2xl text-base leading-relaxed text-foreground/70 md:text-lg transition-all duration-700 delay-200 ${
-            isVisible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
-          }`}
-        >
-          Founders in Bangalore and Mumbai that North American capital hasn{"'"}t found yet. That gap is an opportunity nobody is working on seriously enough. I want to be the person who closes it.
-        </p>
-
         {/* The manifesto statement */}
         <div
-          className={`relative transition-all duration-700 delay-300 ${
+          className={`relative transition-all duration-700 delay-200 ${
             isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
           }`}
         >
