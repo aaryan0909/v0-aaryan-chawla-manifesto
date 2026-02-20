@@ -77,7 +77,7 @@ export function Proof() {
                   <h3 className="text-lg font-medium text-foreground md:text-xl">
                     {item.title}
                   </h3>
-                  <p className="leading-relaxed text-muted-foreground">
+                  <p className="leading-relaxed text-foreground/75">
                     {item.description}
                   </p>
                 </div>
