@@ -4,28 +4,32 @@ import { useEffect, useRef, useState } from "react"
 
 const proofItems = [
   {
+    num: "01",
     label: "Community Trust",
-    title: "Fixed a broken arrears rate formula",
+    title: "Fixed a broken arrears rate formula.",
     description:
-      "It went live. The reported rate jumped far higher than anyone expected. The number had been wrong for years. Nobody questioned it because it looked reasonable. That moment taught me something I\u2019ve never forgotten: a number that looks credible and isn\u2019t is more dangerous than no number at all.",
+      "It went live. The reported rate jumped far higher than anyone expected. The number had been wrong for years. Nobody questioned it because it looked reasonable.",
   },
   {
+    num: "02",
     label: "Manulife",
-    title: "Rebuilt a 2-week reporting cycle from scratch",
+    title: "Rebuilt a 2-week reporting cycle from scratch.",
     description:
-      "Used Python and SQL to cut it by 50%. Then refused to build a dashboard on broken intake data because I\u2019d rather have the uncomfortable conversation than ship a beautiful lie.",
+      "Python and SQL. Cut it by 50%. Then refused to build a dashboard on broken intake data \u2014 I\u2019d rather have the uncomfortable conversation than ship a beautiful lie.",
   },
   {
+    num: "03",
     label: "HDFC Bank",
-    title: "Built ML models for sentiment analysis",
+    title: "Built ML models for sentiment analysis.",
     description:
-      "At India\u2019s largest private bank in Mumbai, I built machine learning models to analyze sentiment across customer service data \u2014 turning thousands of unstructured interactions into signal leadership could act on.",
+      "India\u2019s largest private bank. Turned thousands of unstructured customer service interactions into signal leadership could act on.",
   },
   {
+    num: "04",
     label: "Questrade",
-    title: "Where finance meets technology",
+    title: "Data infrastructure at scale.",
     description:
-      "Worked at one of Canada\u2019s fastest-growing fintech firms, sharpening my instinct for how data infrastructure powers financial products at scale.",
+      "One of Canada\u2019s fastest-growing fintechs. Sharpened my instinct for how data powers financial products.",
   },
 ]
 
@@ -45,39 +49,48 @@ export function Proof() {
   }, [])
 
   return (
-    <section
-      ref={ref}
-      className="border-t border-border px-6 py-24 md:px-16 md:py-32 lg:px-24"
-    >
-      <div className="mx-auto max-w-3xl">
+    <section ref={ref} className="relative px-6 py-32 md:px-16 md:py-40 lg:px-24">
+      <span className="pointer-events-none absolute top-16 right-6 font-serif text-[12rem] leading-none font-light text-foreground/[0.03] md:right-16 md:text-[20rem] lg:right-24">
+        03
+      </span>
+
+      <div className="relative mx-auto max-w-5xl">
         <p
-          className={`mb-12 font-mono text-xs tracking-widest text-highlight uppercase transition-all duration-700 ${
+          className={`mb-16 font-mono text-[11px] tracking-[0.3em] text-highlight uppercase transition-all duration-700 ${
             isVisible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
           }`}
         >
-          03 &mdash; Proof
+          Proof of work
         </p>
 
         <div className="flex flex-col gap-0">
           {proofItems.map((item, index) => (
             <div
               key={item.label}
-              className={`group border-b border-border py-8 transition-all duration-700 first:border-t ${
+              className={`group relative border-t border-foreground/[0.08] py-10 transition-all duration-700 last:border-b ${
                 isVisible
                   ? "translate-y-0 opacity-100"
                   : "translate-y-8 opacity-0"
               }`}
               style={{ transitionDelay: `${(index + 1) * 150}ms` }}
             >
-              <div className="flex flex-col gap-3 md:flex-row md:gap-8">
-                <span className="shrink-0 font-mono text-xs tracking-wider text-highlight uppercase md:w-36 md:pt-1">
-                  {item.label}
-                </span>
+              <div className="flex flex-col gap-4 md:flex-row md:items-start md:gap-12">
+                {/* Number + label */}
+                <div className="flex items-baseline gap-4 md:w-48 md:shrink-0">
+                  <span className="font-serif text-3xl font-light text-foreground/[0.12] md:text-4xl">
+                    {item.num}
+                  </span>
+                  <span className="font-mono text-[11px] tracking-[0.2em] text-highlight uppercase">
+                    {item.label}
+                  </span>
+                </div>
+
+                {/* Content */}
                 <div className="flex flex-col gap-2">
                   <h3 className="text-lg font-medium text-foreground md:text-xl">
                     {item.title}
                   </h3>
-                  <p className="leading-relaxed text-foreground/75">
+                  <p className="max-w-xl text-base leading-relaxed text-foreground/60">
                     {item.description}
                   </p>
                 </div>

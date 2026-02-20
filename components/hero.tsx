@@ -1,7 +1,6 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { ArrowDown } from "lucide-react"
 
 export function Hero() {
   const [isVisible, setIsVisible] = useState(false)
@@ -12,47 +11,56 @@ export function Hero() {
   }, [])
 
   return (
-    <section className="relative flex min-h-svh flex-col justify-between px-6 py-12 md:px-16 lg:px-24">
-      <div
-        className={`transition-all duration-1000 ease-out ${
-          isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
-        }`}
-      >
-        <p className="font-mono text-xs tracking-widest text-muted-foreground uppercase">
-          Mumbai &mdash; Ontario
-        </p>
-      </div>
+    <section className="relative flex min-h-svh flex-col justify-end px-6 pb-16 pt-24 md:px-16 lg:px-24">
+      {/* Ambient glow */}
+      <div className="pointer-events-none absolute top-0 left-1/4 h-[600px] w-[600px] rounded-full bg-highlight/[0.03] blur-[120px]" />
 
-      <div className="flex max-w-4xl flex-col gap-8 py-24 md:py-32">
-        <h1
-          className={`font-serif text-5xl leading-tight font-light tracking-tight text-primary md:text-7xl lg:text-8xl transition-all duration-1000 delay-200 ease-out ${
-            isVisible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"
+      <div className="relative flex flex-col gap-6">
+        <p
+          className={`font-mono text-[11px] tracking-[0.3em] text-foreground/40 uppercase transition-all duration-700 ${
+            isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
           }`}
         >
-          <span className="text-balance">Aaryan Chawla</span>
+          Mumbai &mdash; Ontario &mdash; Wherever the problem is
+        </p>
+
+        <h1
+          className={`font-serif text-[clamp(3.5rem,10vw,9rem)] leading-[0.9] font-light tracking-tight text-primary transition-all duration-1000 delay-200 ease-out ${
+            isVisible ? "translate-y-0 opacity-100" : "translate-y-16 opacity-0"
+          }`}
+        >
+          Aaryan
+          <br />
+          Chawla
         </h1>
+
+        <div
+          className={`mt-4 h-px w-24 bg-highlight transition-all duration-1000 delay-500 ease-out ${
+            isVisible ? "w-24 opacity-100" : "w-0 opacity-0"
+          }`}
+        />
+
         <p
-          className={`max-w-2xl text-lg leading-relaxed text-foreground/80 md:text-xl transition-all duration-1000 delay-500 ease-out ${
+          className={`max-w-lg text-base leading-relaxed text-foreground/60 md:text-lg transition-all duration-1000 delay-600 ease-out ${
             isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
           }`}
         >
-          Data felt like the thing running underneath everything
-          {" "}&mdash;{" "}
-          <span className="text-foreground font-medium">
+          Data felt like the thing running underneath everything &mdash;{" "}
+          <span className="text-foreground/90">
             and I needed to learn how to read it.
           </span>
         </p>
-      </div>
 
-      <div
-        className={`flex items-center gap-3 transition-all duration-1000 delay-700 ease-out ${
-          isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
-        }`}
-      >
-        <ArrowDown className="h-4 w-4 animate-bounce text-muted-foreground" />
-        <span className="font-mono text-xs tracking-wider text-muted-foreground uppercase">
-          Keep reading
-        </span>
+        <div
+          className={`mt-12 flex items-center gap-3 transition-all duration-1000 delay-700 ease-out ${
+            isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
+          }`}
+        >
+          <div className="h-8 w-px animate-pulse bg-highlight/60" />
+          <span className="font-mono text-[10px] tracking-[0.2em] text-foreground/30 uppercase">
+            Scroll
+          </span>
+        </div>
       </div>
     </section>
   )

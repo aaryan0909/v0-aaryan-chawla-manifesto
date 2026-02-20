@@ -18,52 +18,47 @@ export function WhatNext() {
   }, [])
 
   return (
-    <section
-      ref={ref}
-      className="border-t border-border px-6 py-24 md:px-16 md:py-32 lg:px-24"
-    >
-      <div className="mx-auto max-w-3xl">
+    <section ref={ref} className="relative px-6 py-32 md:px-16 md:py-40 lg:px-24">
+      <div className="mx-auto max-w-5xl">
         <p
-          className={`mb-12 font-mono text-xs tracking-widest text-highlight uppercase transition-all duration-700 ${
+          className={`mb-16 font-mono text-[11px] tracking-[0.3em] text-highlight uppercase transition-all duration-700 ${
             isVisible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
           }`}
         >
           04 &mdash; What{"'"}s next
         </p>
 
-        <div className="flex flex-col gap-8">
-          <p
-            className={`font-serif text-2xl leading-snug font-light text-primary md:text-3xl lg:text-4xl transition-all duration-700 delay-100 ${
-              isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
-            }`}
-          >
-            <span className="text-balance">
-              I still think about India constantly.
-            </span>
-          </p>
+        <h2
+          className={`mb-8 font-serif text-[clamp(2rem,5vw,4.5rem)] leading-[1.05] font-light text-primary transition-all duration-1000 delay-100 ${
+            isVisible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"
+          }`}
+        >
+          <span className="text-balance">
+            I still think about India constantly.
+          </span>
+        </h2>
 
-          <p
-            className={`text-lg leading-relaxed text-foreground/90 md:text-xl transition-all duration-700 delay-200 ${
-              isVisible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
-            }`}
-          >
-            About founders in Bangalore and Mumbai that North American capital
-            hasn{"'"}t found yet. That gap feels like an opportunity nobody is
-            working on seriously enough. I want to be the person who closes it.
-          </p>
+        <p
+          className={`mb-16 max-w-2xl text-base leading-relaxed text-foreground/70 md:text-lg transition-all duration-700 delay-200 ${
+            isVisible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
+          }`}
+        >
+          Founders in Bangalore and Mumbai that North American capital hasn{"'"}t found yet. That gap is an opportunity nobody is working on seriously enough. I want to be the person who closes it.
+        </p>
 
-          <div
-            className={`mt-4 rounded-md border border-border bg-secondary/50 p-6 transition-all duration-700 delay-300 ${
-              isVisible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
-            }`}
-          >
-            <p className="text-lg leading-relaxed text-foreground md:text-xl">
+        {/* The manifesto statement */}
+        <div
+          className={`relative transition-all duration-700 delay-300 ${
+            isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+          }`}
+        >
+          <div className="absolute top-0 left-0 h-full w-1 bg-highlight" />
+          <div className="pl-8 md:pl-12">
+            <p className="text-xl leading-snug text-foreground md:text-2xl">
               I am not looking for a comfortable job.
-              <br />
-              <span className="text-highlight font-medium">
-                I am looking for a hard problem, run by people who care whether
-                their numbers are honest.
-              </span>
+            </p>
+            <p className="mt-2 text-xl leading-snug text-highlight font-medium md:text-2xl">
+              I am looking for a hard problem, run by people who care whether their numbers are honest.
             </p>
           </div>
         </div>
