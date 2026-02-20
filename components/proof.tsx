@@ -4,28 +4,28 @@ import { useEffect, useRef, useState } from "react"
 
 const proofItems = [
   {
-    label: "Waterloo",
-    title: "Honours Mathematics",
-    description:
-      "One of the most rigorous quantitative programs in the world. Co-ops at Loblaw, Community Trust, Questrade, and HDFC Bank in Mumbai.",
-  },
-  {
     label: "Community Trust",
     title: "Fixed a broken arrears rate formula",
     description:
-      "It went live. The reported rate jumped far higher than anyone expected. The number had been wrong for years. Nobody questioned it because it looked reasonable.",
+      "It went live. The reported rate jumped far higher than anyone expected. The number had been wrong for years. Nobody questioned it because it looked reasonable. That moment taught me something I\u2019ve never forgotten: a number that looks credible and isn\u2019t is more dangerous than no number at all.",
   },
   {
     label: "Manulife",
-    title: "Rebuilt a 2-week reporting cycle",
+    title: "Rebuilt a 2-week reporting cycle from scratch",
     description:
-      "Used Python and SQL to cut it by 50%. Refused to build a dashboard on broken intake data because I\u2019d rather have that conversation than ship a lie.",
+      "Used Python and SQL to cut it by 50%. Then refused to build a dashboard on broken intake data because I\u2019d rather have the uncomfortable conversation than ship a beautiful lie.",
   },
   {
     label: "HDFC Bank",
-    title: "Mumbai roots, global thinking",
+    title: "Built ML models for sentiment analysis",
     description:
-      "Started in India\u2019s largest private bank. Saw firsthand how capital moves across borders, and where it doesn\u2019t.",
+      "At India\u2019s largest private bank in Mumbai, I built machine learning models to analyze sentiment across customer service data \u2014 turning thousands of unstructured interactions into signal leadership could act on.",
+  },
+  {
+    label: "Questrade",
+    title: "Where finance meets technology",
+    description:
+      "Worked at one of Canada\u2019s fastest-growing fintech firms, sharpening my instinct for how data infrastructure powers financial products at scale.",
   },
 ]
 

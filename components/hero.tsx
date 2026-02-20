@@ -32,15 +32,14 @@ export function Hero() {
           <span className="text-balance">Aaryan Chawla</span>
         </h1>
         <p
-          className={`max-w-2xl text-lg leading-relaxed text-muted-foreground md:text-xl transition-all duration-1000 delay-500 ease-out ${
+          className={`max-w-2xl text-lg leading-relaxed text-foreground/80 md:text-xl transition-all duration-1000 delay-500 ease-out ${
             isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
           }`}
         >
-          I chose data not to become an analyst.
-          <br />
-          <span className="text-foreground">
-            I chose it because it felt like the thing running underneath
-            everything, and I needed to learn how to read it.
+          Data felt like the thing running underneath everything
+          {" "}&mdash;{" "}
+          <span className="text-foreground font-medium">
+            and I needed to learn how to read it.
           </span>
         </p>
       </div>

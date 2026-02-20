@@ -47,9 +47,8 @@ export function HowIThink() {
             }`}
           >
             I think in systems. When something breaks, I don{"'"}t reach for the fix.
-            I reach for the reason. When a dashboard looks right but the intake
-            data is wrong, I{"'"}d rather have the uncomfortable conversation than
-            ship a beautiful lie.
+            I reach for the reason. Most people want dashboards. I want to know
+            if the data feeding the dashboard is honest first.
           </p>
 
           <p
@@ -57,9 +56,11 @@ export function HowIThink() {
               isVisible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
             }`}
           >
-            I moved from Mumbai to Ontario in 2021, arriving during COVID when
-            the city was still frozen, and built a life here anyway. I{"'"}m wired to
-            walk toward hard problems, not away from them.
+            The 50/50 brain means I never approach a problem from one direction.
+            I can build the model and tell the story about why it matters. I can
+            write the SQL and know which question the business actually needs
+            answered. Most people are one or the other. I{"'"}m wired to be both,
+            and I{"'"}ve stopped apologizing for it.
           </p>
 
           <p
