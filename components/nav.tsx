@@ -24,10 +24,12 @@ export function Nav() {
       </span>
       <div className="flex gap-6">
         <a
-          href="mailto:aaryanchawla@outlook.com"
+          href="https://github.com/aaryan0909"
+          target="_blank"
+          rel="noopener noreferrer"
           className="font-mono text-xs tracking-wider text-muted-foreground uppercase transition-colors hover:text-highlight"
         >
-          Contact
+          GitHub
         </a>
         <a
           href="https://linkedin.com/in/aaryan-chawla"
@@ -36,6 +38,12 @@ export function Nav() {
           className="font-mono text-xs tracking-wider text-muted-foreground uppercase transition-colors hover:text-highlight"
         >
           LinkedIn
+        </a>
+        <a
+          href="mailto:aaryanchawla@outlook.com"
+          className="font-mono text-xs tracking-wider text-muted-foreground uppercase transition-colors hover:text-highlight"
+        >
+          Contact
         </a>
       </div>
     </nav>

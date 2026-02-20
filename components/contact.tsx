@@ -50,6 +50,15 @@ export function Contact() {
               <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
             </a>
             <a
+              href="https://github.com/aaryan0909"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group inline-flex items-center gap-2 border-b border-foreground/20 pb-1 text-lg text-foreground transition-colors hover:border-highlight hover:text-highlight"
+            >
+              GitHub
+              <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+            </a>
+            <a
               href="https://linkedin.com/in/aaryan-chawla"
               target="_blank"
               rel="noopener noreferrer"
