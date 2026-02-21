@@ -76,21 +76,21 @@ export function Proof() {
             >
               <div className="flex flex-col gap-4 md:flex-row md:items-start md:gap-12">
                 {/* Number + label */}
-                <div className="flex items-baseline gap-4 md:w-48 md:shrink-0">
-                  <span className="font-serif text-3xl font-light text-foreground/[0.12] md:text-4xl">
+                <div className="flex items-baseline gap-4 md:w-52 md:shrink-0">
+                  <span className="font-serif text-3xl font-light text-highlight/60 md:text-4xl">
                     {item.num}
                   </span>
-                  <span className="font-mono text-[11px] tracking-[0.2em] text-highlight uppercase">
+                  <span className="font-mono text-xs tracking-[0.2em] text-highlight uppercase">
                     {item.label}
                   </span>
                 </div>
 
                 {/* Content */}
-                <div className="flex flex-col gap-2">
-                  <h3 className="text-lg font-medium text-foreground md:text-xl">
+                <div className="flex flex-col gap-3">
+                  <h3 className="text-xl font-medium text-foreground md:text-2xl">
                     {item.title}
                   </h3>
-                  <p className="max-w-xl text-base leading-relaxed text-foreground/60">
+                  <p className="max-w-xl text-base leading-relaxed text-foreground/75 md:text-lg">
                     {item.description}
                   </p>
                 </div>

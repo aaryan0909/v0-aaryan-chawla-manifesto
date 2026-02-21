@@ -8,7 +8,7 @@ export function Footer() {
         <div className="flex items-center gap-6">
           <a
             href="mailto:chawlaaaryan280@gmail.com"
-            className="font-mono text-xs tracking-wider text-muted-foreground transition-colors hover:text-highlight"
+            className="font-mono text-sm tracking-wider text-foreground/60 transition-colors hover:text-highlight"
           >
             Email
           </a>
@@ -16,7 +16,7 @@ export function Footer() {
             href="https://github.com/aaryan0909"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-mono text-xs tracking-wider text-muted-foreground transition-colors hover:text-highlight"
+            className="font-mono text-sm tracking-wider text-foreground/60 transition-colors hover:text-highlight"
           >
             GitHub
           </a>
@@ -24,7 +24,7 @@ export function Footer() {
             href="https://www.linkedin.com/in/aaryan-chawla"
             target="_blank"
             rel="noopener noreferrer"
-            className="font-mono text-xs tracking-wider text-muted-foreground transition-colors hover:text-highlight"
+            className="font-mono text-sm tracking-wider text-foreground/60 transition-colors hover:text-highlight"
           >
             LinkedIn
           </a>

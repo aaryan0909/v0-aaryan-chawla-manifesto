@@ -43,10 +43,10 @@ export function HowIThink() {
               isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
             }`}
           >
-            <h3 className="font-mono text-[11px] tracking-[0.2em] text-foreground/40 uppercase">
+            <h3 className="font-mono text-xs tracking-[0.2em] text-foreground/50 uppercase">
               Systems
             </h3>
-            <p className="text-base leading-relaxed text-foreground/70 md:text-lg">
+            <p className="text-lg leading-relaxed text-foreground/80 md:text-xl">
               When something breaks, I don{"'"}t reach for the fix. I reach for the reason. Most people want dashboards. I want to know if the data feeding the dashboard is honest first.
             </p>
           </div>
@@ -56,10 +56,10 @@ export function HowIThink() {
               isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
             }`}
           >
-            <h3 className="font-mono text-[11px] tracking-[0.2em] text-foreground/40 uppercase">
+            <h3 className="font-mono text-xs tracking-[0.2em] text-foreground/50 uppercase">
               Stories
             </h3>
-            <p className="text-base leading-relaxed text-foreground/70 md:text-lg">
+            <p className="text-lg leading-relaxed text-foreground/80 md:text-xl">
               The 50/50 brain means I never approach a problem from one direction. I can build the model and tell the story about why it matters. I can write the SQL and know which question the business actually needs answered.
             </p>
           </div>
@@ -70,7 +70,7 @@ export function HowIThink() {
             isVisible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
           }`}
         >
-          <p className="max-w-xl text-lg leading-relaxed text-foreground/90 font-medium md:text-xl">
+          <p className="max-w-xl text-xl leading-relaxed text-foreground font-medium md:text-2xl">
             I feel in stories. I think in data. The tension between those two is where everything interesting happens.
           </p>
         </div>

@@ -36,10 +36,10 @@ export function WhatNext() {
         >
           <div className="absolute top-0 left-0 h-full w-1 bg-highlight" />
           <div className="pl-8 md:pl-12">
-            <p className="text-xl leading-snug text-foreground md:text-2xl">
+            <p className="text-2xl leading-snug text-foreground md:text-3xl">
               I am not looking for a comfortable job.
             </p>
-            <p className="mt-2 text-xl leading-snug text-highlight font-medium md:text-2xl">
+            <p className="mt-3 text-2xl leading-snug text-highlight font-medium md:text-3xl">
               I am looking for a hard problem, run by people who care whether their numbers are honest.
             </p>
           </div>

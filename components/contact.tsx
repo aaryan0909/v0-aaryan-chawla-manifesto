@@ -39,7 +39,7 @@ export function Contact() {
             we should probably talk.
           </h2>
 
-          <p className="mb-12 max-w-lg text-base leading-relaxed text-foreground/70 md:text-lg">
+          <p className="mb-12 max-w-lg text-lg leading-relaxed text-foreground/80 md:text-xl">
             Reach me at{" "}
             <a
               href="mailto:chawlaaaryan280@gmail.com"
@@ -72,7 +72,7 @@ export function Contact() {
                 href="https://github.com/aaryan0909"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-mono text-[11px] tracking-[0.2em] text-foreground/50 uppercase transition-colors hover:text-highlight"
+                className="font-mono text-sm tracking-[0.15em] text-foreground/70 uppercase transition-colors hover:text-highlight"
               >
                 GitHub
               </a>
@@ -80,7 +80,7 @@ export function Contact() {
                 href="https://www.linkedin.com/in/aaryan-chawla"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="font-mono text-[11px] tracking-[0.2em] text-foreground/50 uppercase transition-colors hover:text-highlight"
+                className="font-mono text-sm tracking-[0.15em] text-foreground/70 uppercase transition-colors hover:text-highlight"
               >
                 LinkedIn
               </a>

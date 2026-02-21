@@ -41,7 +41,7 @@ export function Hero() {
         />
 
         <p
-          className={`max-w-lg text-base leading-relaxed text-foreground/60 md:text-lg transition-all duration-1000 delay-600 ease-out ${
+          className={`max-w-lg text-lg leading-relaxed text-foreground/70 md:text-xl transition-all duration-1000 delay-600 ease-out ${
             isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
           }`}
         >
