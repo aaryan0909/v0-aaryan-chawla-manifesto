@@ -28,7 +28,7 @@ export function HowIThink() {
         <p className="font-mono text-[11px] tracking-[0.3em] text-highlight uppercase mb-8">
           02 &mdash; How I think
         </p>
-        <blockquote className="font-serif text-[clamp(1.8rem,4.5vw,4rem)] leading-[1.1] font-light text-primary">
+        <blockquote className="text-pretty font-serif text-[clamp(1.5rem,4.5vw,4rem)] leading-[1.2] font-light text-primary">
           <span className="text-highlight">{'"'}</span>
           A number that looks credible and isn{"'"}t is more dangerous than no number at all.
           <span className="text-highlight">{'"'}</span>

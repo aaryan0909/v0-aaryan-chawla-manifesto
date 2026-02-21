@@ -20,9 +20,9 @@ const proofItems = [
   {
     num: "03",
     label: "HDFC Bank",
-    title: "Built ML models for sentiment analysis.",
+    title: "Explored sentiment analysis and ML applications.",
     description:
-      "India\u2019s largest private bank. Turned thousands of unstructured customer service interactions into signal leadership could act on.",
+      "At India\u2019s largest private bank in Mumbai, I worked with customer service data to explore how machine learning could surface patterns in unstructured interactions.",
   },
   {
     num: "04",

@@ -33,18 +33,37 @@ export function Contact() {
             05 &mdash; Say hello
           </p>
 
-          <h2 className="mb-16 font-serif text-3xl leading-snug font-light text-primary md:text-5xl">
+          <h2 className="mb-8 font-serif text-3xl leading-snug font-light text-primary md:text-5xl">
             If you read this far,
             <br />
             we should probably talk.
           </h2>
 
+          <p className="mb-12 max-w-lg text-base leading-relaxed text-foreground/70 md:text-lg">
+            Reach me at{" "}
+            <a
+              href="mailto:chawlaaaryan280@gmail.com"
+              className="text-foreground underline decoration-foreground/30 underline-offset-4 transition-colors hover:text-highlight hover:decoration-highlight"
+            >
+              chawlaaaryan280@gmail.com
+            </a>
+            {" "}or find me on{" "}
+            <a
+              href="https://www.linkedin.com/in/aaryan-chawla"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-foreground underline decoration-foreground/30 underline-offset-4 transition-colors hover:text-highlight hover:decoration-highlight"
+            >
+              LinkedIn
+            </a>.
+          </p>
+
           <div className="flex flex-col gap-6 md:flex-row md:items-center md:gap-12">
             <a
-              href="mailto:aaryanchawla@outlook.com"
+              href="mailto:chawlaaaryan280@gmail.com"
               className="group inline-flex items-center gap-3 bg-foreground px-8 py-4 text-background transition-all hover:bg-highlight hover:text-background"
             >
-              <span className="text-base font-medium tracking-wide">Get in touch</span>
+              <span className="text-base font-medium tracking-wide">Say hello</span>
               <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
             </a>
 
@@ -58,7 +77,7 @@ export function Contact() {
                 GitHub
               </a>
               <a
-                href="https://linkedin.com/in/aaryan-chawla"
+                href="https://www.linkedin.com/in/aaryan-chawla"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-mono text-[11px] tracking-[0.2em] text-foreground/50 uppercase transition-colors hover:text-highlight"
@@ -67,6 +86,11 @@ export function Contact() {
               </a>
             </div>
           </div>
+
+          {/* Sign-off */}
+          <p className="mt-20 font-serif text-base text-foreground/40 italic md:text-lg">
+            Still chasing the thing underneath. Always will be.
+          </p>
         </div>
       </div>
     </section>

@@ -32,7 +32,7 @@ export function Nav() {
           GitHub
         </a>
         <a
-          href="https://linkedin.com/in/aaryan-chawla"
+          href="https://www.linkedin.com/in/aaryan-chawla"
           target="_blank"
           rel="noopener noreferrer"
           className="font-mono text-xs tracking-wider text-muted-foreground uppercase transition-colors hover:text-highlight"
@@ -40,7 +40,7 @@ export function Nav() {
           LinkedIn
         </a>
         <a
-          href="mailto:aaryanchawla@outlook.com"
+          href="mailto:chawlaaaryan280@gmail.com"
           className="font-mono text-xs tracking-wider text-muted-foreground uppercase transition-colors hover:text-highlight"
         >
           Contact
