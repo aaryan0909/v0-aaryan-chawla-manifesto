@@ -27,7 +27,7 @@ export function Nav() {
           href="https://github.com/aaryan0909"
           target="_blank"
           rel="noopener noreferrer"
-          className="font-mono text-xs tracking-wider text-muted-foreground uppercase transition-colors hover:text-highlight"
+          className="font-mono text-xs tracking-wider text-foreground/70 uppercase transition-colors hover:text-highlight"
         >
           GitHub
         </a>
@@ -35,13 +35,13 @@ export function Nav() {
           href="https://www.linkedin.com/in/aaryan-chawla"
           target="_blank"
           rel="noopener noreferrer"
-          className="font-mono text-xs tracking-wider text-muted-foreground uppercase transition-colors hover:text-highlight"
+          className="font-mono text-xs tracking-wider text-foreground/70 uppercase transition-colors hover:text-highlight"
         >
           LinkedIn
         </a>
         <a
           href="mailto:chawlaaaryan280@gmail.com"
-          className="font-mono text-xs tracking-wider text-muted-foreground uppercase transition-colors hover:text-highlight"
+          className="font-mono text-xs tracking-wider text-foreground/70 uppercase transition-colors hover:text-highlight"
         >
           Contact
         </a>

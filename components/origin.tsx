@@ -47,7 +47,7 @@ export function Origin() {
         {/* Tight paragraphs */}
         <div className="flex flex-col gap-6">
           <p
-            className={`text-base leading-relaxed text-foreground/70 md:text-lg transition-all duration-700 delay-200 ${
+            className={`text-lg leading-relaxed text-foreground/80 md:text-xl transition-all duration-700 delay-200 ${
               isVisible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
             }`}
           >
@@ -55,7 +55,7 @@ export function Origin() {
           </p>
 
           <p
-            className={`text-base leading-relaxed text-foreground/70 md:text-lg transition-all duration-700 delay-300 ${
+            className={`text-lg leading-relaxed text-foreground/80 md:text-xl transition-all duration-700 delay-300 ${
               isVisible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
             }`}
           >
@@ -73,7 +73,7 @@ export function Origin() {
             <p className="mb-2 font-mono text-[11px] tracking-[0.2em] text-highlight/70 uppercase">
               50 / 50
             </p>
-            <p className="text-base leading-relaxed text-foreground/70 md:text-lg">
+            <p className="text-lg leading-relaxed text-foreground/80 md:text-xl">
               Tested as a kid. Both sides of the brain fire equally &mdash; analytical and creative. ADD on top. I don{"'"}t know if the test was real. I know the feeling is. Never a master of one thing. Always a student of everything.
             </p>
           </div>
@@ -98,7 +98,7 @@ export function Origin() {
         {/* The bridge to now */}
         <div className="flex flex-col gap-6">
           <p
-            className={`text-base leading-relaxed text-foreground/70 md:text-lg transition-all duration-700 delay-[600ms] ${
+            className={`text-lg leading-relaxed text-foreground/80 md:text-xl transition-all duration-700 delay-[600ms] ${
               isVisible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
             }`}
           >
@@ -106,7 +106,7 @@ export function Origin() {
           </p>
 
           <p
-            className={`text-lg leading-relaxed text-foreground/90 font-medium md:text-xl transition-all duration-700 delay-700 ${
+            className={`text-xl leading-relaxed text-foreground font-medium md:text-2xl transition-all duration-700 delay-700 ${
               isVisible ? "translate-y-0 opacity-100" : "translate-y-6 opacity-0"
             }`}
           >
