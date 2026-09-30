@@ -68,6 +68,7 @@ const projects: Project[] = [
       "Live data-quality-checked view of Toronto subway delays, from an open pipeline anyone can rerun.",
     tags: ["Python", "DuckDB · dbt", "Data-quality checks"],
     demoHref: "https://toronto-transit-data-platform.vercel.app",
+    githubHref: "https://github.com/aaryan0909/aryan0909-toronto-transit-data-platfor",
   },
   {
     number: "02",
