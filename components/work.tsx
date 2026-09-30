@@ -85,10 +85,10 @@ const projects: Project[] = [
     kicker: "Interactive food atlas",
     title: "Recipe Cuisine Atlas",
     description:
-      "Maps recipes to cuisines and ingredients, so you can see what different food cultures are made of.",
+      "Follow chili, tomato, potato, coffee, and sugar across the world through history, then explore 472 recipes by cuisine and ingredient.",
     tags: ["React", "D3", "Food data"],
-    unavailableNote:
-      "No public link yet. It lives on Replit, and I'd rather leave a gap than send you to a login wall.",
+    demoHref: "https://recipe-atlas-taupe.vercel.app",
+    githubHref: "https://github.com/aaryan0909/recipe-atlas",
   },
   {
     number: "04",
