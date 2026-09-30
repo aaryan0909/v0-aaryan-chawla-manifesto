@@ -55,10 +55,10 @@ export default function RootLayout({
       <body className="font-sans antialiased">
         <ThemeProvider
           attribute="data-theme"
-          defaultTheme="system"
-          enableSystem
+          defaultTheme="paper"
+          enableSystem={false}
           themes={['paper', 'ink', 'blueprint']}
-          value={{ light: 'paper', dark: 'ink' }}
+          value={{ paper: 'paper', ink: 'ink', blueprint: 'blueprint' }}
         >
           {children}
         </ThemeProvider>

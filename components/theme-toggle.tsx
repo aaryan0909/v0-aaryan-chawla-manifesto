@@ -13,21 +13,16 @@ const THEMES = [
 /**
  * Always-visible colour scheme switch. Lives in the fixed nav, so it is
  * on screen at all times. Choice persists via next-themes (localStorage);
- * before any choice is made it follows the OS: light -> Paper, dark -> Ink.
+ * before any choice is made it defaults to Paper. The three schemes are
+ * named themes, not OS light/dark: system detection is disabled.
  */
 export function ThemeToggle() {
-  const { theme, resolvedTheme, setTheme } = useTheme()
+  const { theme, setTheme } = useTheme()
   const [mounted, setMounted] = useState(false)
 
   useEffect(() => setMounted(true), [])
 
-  const active = !mounted
-    ? undefined
-    : theme === 'system' || !theme
-      ? resolvedTheme === 'dark'
-        ? 'ink'
-        : 'paper'
-      : theme
+  const active = !mounted ? undefined : (theme ?? 'paper')
 
   return (
     <div
