@@ -6,29 +6,27 @@ import { Note } from "@/components/note"
 
 export function Contact() {
   return (
-    <section id="contact" className="scroll-mt-20 px-6 py-32 md:px-16 md:py-40 lg:px-24">
+    <section id="contact" className="scroll-mt-20 px-6 py-20 md:px-16 md:py-28 lg:px-24">
       <div className="mx-auto max-w-5xl">
         <Reveal>
           <div>
             <p className="mb-8 font-mono text-[11px] tracking-[0.3em] text-highlight uppercase">
-              05 &mdash; Say hello
+              05 &middot; Say hello
             </p>
 
-            <h2 className="mb-8 font-serif text-3xl leading-snug font-light text-primary md:text-5xl">
-              If you read this far,
-              <br />
-              we should probably talk.
+            <h2 className="mb-6 font-serif text-3xl leading-snug font-light text-primary md:text-5xl">
+              Say hello.
             </h2>
 
-            <p className="mb-12 max-w-lg text-lg leading-relaxed text-body md:text-xl">
+            <p className="mb-10 max-w-lg text-lg leading-relaxed text-body md:text-xl">
               Reach me at{" "}
               <a
                 href="mailto:chawlaaaryan280@gmail.com"
                 className="text-foreground underline decoration-border underline-offset-4 transition-colors hover:text-highlight hover:decoration-highlight"
               >
                 chawlaaaryan280@gmail.com
-              </a>
-              {" "}or find me on{" "}
+              </a>{" "}
+              or on{" "}
               <a
                 href="https://www.linkedin.com/in/aaryan-chawla"
                 target="_blank"
@@ -36,7 +34,8 @@ export function Contact() {
                 className="text-foreground underline decoration-border underline-offset-4 transition-colors hover:text-highlight hover:decoration-highlight"
               >
                 LinkedIn
-              </a>.
+              </a>
+              .
             </p>
 
             <div className="flex flex-col gap-6 md:flex-row md:items-center md:gap-12">
@@ -71,11 +70,6 @@ export function Contact() {
             <Note>
               No contact form, deliberately. Forms are where good messages go to be ignored.
             </Note>
-
-            {/* Sign-off */}
-            <p className="mt-20 font-serif text-base text-muted-foreground italic md:text-lg">
-              Still chasing the thing underneath. Always will be.
-            </p>
           </div>
         </Reveal>
       </div>

@@ -1,95 +1,34 @@
 "use client"
 
 import { Reveal } from "@/components/reveal"
-import { Note } from "@/components/note"
 
 export function Origin() {
   return (
-    <section id="origin" className="relative scroll-mt-20 px-6 py-32 md:px-16 md:py-40 lg:px-24">
-      {/* Section number as background watermark (decorative) */}
-      <span aria-hidden="true" className="pointer-events-none absolute top-16 right-6 font-serif text-[12rem] leading-none font-light text-foreground/[0.03] md:right-16 md:text-[20rem] lg:right-24">
-        01
-      </span>
-
+    <section id="origin" className="relative scroll-mt-20 px-6 py-20 md:px-16 md:py-28 lg:px-24">
       <div className="relative mx-auto max-w-3xl">
         <Reveal>
-          <p className="mb-16 font-mono text-[11px] tracking-[0.3em] text-highlight uppercase">
-            Origin
+          <p className="mb-10 font-mono text-[11px] tracking-[0.3em] text-highlight uppercase">
+            01 &middot; Origin
           </p>
         </Reveal>
 
-        {/* The hook -- large serif */}
         <Reveal delay={100}>
-          <h2 className="mb-16 font-serif text-3xl leading-snug font-light text-primary md:text-4xl lg:text-5xl">
-            <span className="text-balance">
-              At 14, I watched two elections reshape the world before I had any framework to understand it.
-            </span>
+          <h2 className="mb-8 font-serif text-3xl leading-snug font-light text-primary md:text-4xl">
+            Mumbai first. Data second. Toronto since 2021.
           </h2>
         </Reveal>
 
-        {/* Tight paragraphs */}
-        <div className="flex flex-col gap-6">
-          <Reveal delay={200}>
-            <p className="text-lg leading-relaxed text-body md:text-xl">
-              Modi. Trump. I wasn{"'"}t following political science. I was a kid on Instagram watching ideas spark, spread, mutate, and become what everyone believed. Propaganda in real time. Consensus from nowhere. Something invisible shaping what people thought.
-            </p>
-          </Reveal>
-
-          <Reveal delay={300}>
-            <p className="text-lg leading-relaxed text-body md:text-xl">
-              I didn{"'"}t know what it was. I just knew it was real. That{"'"}s why I chose data &mdash; not to become an analyst, but because data felt like the layer beneath the headlines, the opinions, the noise.
-            </p>
-          </Reveal>
-        </div>
-
-        <Reveal delay={350}>
-          <Note>
-            I didn{"'"}t have the word propaganda yet. I had the suspicion. The suspicion turned out to be the more useful tool.
-          </Note>
+        <Reveal delay={200}>
+          <p className="text-lg leading-relaxed text-body md:text-xl">
+            As a teenager in Mumbai, I watched opinions spread faster than facts. Data felt like the layer underneath. I moved to Ontario in 2021, studied Honours Mathematics at the University of Waterloo, and now build the measurement pipelines at Manulife.
+          </p>
         </Reveal>
 
-        {/* Visual break -- the 50/50 brain */}
-        <Reveal delay={400}>
-          <div className="my-16 flex items-start gap-6 border-l-2 border-highlight pl-6">
-            <div>
-              <p className="mb-2 font-mono text-[11px] tracking-[0.2em] text-highlight uppercase">
-                50 / 50
-              </p>
-              <p className="text-lg leading-relaxed text-body md:text-xl">
-                A test once told me my brain runs 50/50: analytical and creative. The test was probably nonsense. The split is very real. Never a master of one thing. Always a student of everything.
-              </p>
-            </div>
-          </div>
+        <Reveal delay={300}>
+          <p className="mt-6 text-lg leading-relaxed text-foreground md:text-xl">
+            The suspicion came first. The maths caught up.
+          </p>
         </Reveal>
-
-        {/* Tags as visual texture */}
-        <Reveal delay={500}>
-          <div className="mb-16 flex flex-wrap gap-3">
-            {["History", "Cooking", "Music", "Football", "Basketball", "Tennis", "Boxing", "Muay Thai"].map((tag) => (
-              <span
-                key={tag}
-                className="rounded-sm border border-border px-3 py-1.5 font-mono text-[11px] tracking-wider text-muted-foreground"
-              >
-                {tag}
-              </span>
-            ))}
-          </div>
-        </Reveal>
-
-        {/* The bridge to now */}
-        <div className="flex flex-col gap-6">
-          <Reveal delay={600}>
-            <p className="text-lg leading-relaxed text-body md:text-xl">
-              In 2021, I moved from Mumbai to Ontario during COVID and built a life anyway. Took that instinct to the University of Waterloo &mdash; Honours Mathematics, one of the most rigorous quant programs in the world. Now I{"'"}m a Data Orchestration Specialist at Manulife, building and running the pipelines that measurement depends on.
-            </p>
-          </Reveal>
-
-          <Reveal delay={700}>
-            <p className="text-xl leading-relaxed text-foreground font-medium md:text-2xl">
-              The thread from that 14-year-old watching the world shift to the person writing this is the same thread.
-            </p>
-          </Reveal>
-        </div>
       </div>
     </section>
   )
