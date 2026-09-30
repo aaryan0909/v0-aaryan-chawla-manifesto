@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import { ThemeToggle } from "@/components/theme-toggle"
 
 const links = [
   { label: "Origin", href: "#origin" },
@@ -31,21 +32,24 @@ export function Nav() {
       >
         AC
       </a>
-      <div className="flex items-center gap-5 md:gap-8">
-        {links.map((link) => (
-          <a
-            key={link.href}
-            href={link.href}
-            className={`font-mono text-xs tracking-wider text-foreground/70 uppercase transition-colors hover:text-highlight ${
-              // Keep the nav compact on small screens: anchors 1,2 collapse away
-              link.href === "#origin" || link.href === "#how-i-think"
-                ? "hidden sm:inline"
-                : ""
-            }`}
-          >
-            {link.label}
-          </a>
-        ))}
+      <div className="flex items-center gap-4 md:gap-6">
+        <div className="flex items-center gap-5 md:gap-8">
+          {links.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className={`font-mono text-xs tracking-wider text-body uppercase transition-colors hover:text-highlight ${
+                // Keep the nav compact on small screens: anchors 1,2 collapse away
+                link.href === "#origin" || link.href === "#how-i-think"
+                  ? "hidden sm:inline"
+                  : ""
+              }`}
+            >
+              {link.label}
+            </a>
+          ))}
+        </div>
+        <ThemeToggle />
       </div>
     </nav>
   )

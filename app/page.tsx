@@ -14,23 +14,23 @@ export default function Page() {
       <Hero />
 
       {/* Divider */}
-      <div className="mx-6 h-px bg-foreground/[0.06] md:mx-16 lg:mx-24" />
+      <div className="mx-6 h-px bg-border md:mx-16 lg:mx-24" />
 
       <Origin />
 
-      <div className="mx-6 h-px bg-foreground/[0.06] md:mx-16 lg:mx-24" />
+      <div className="mx-6 h-px bg-border md:mx-16 lg:mx-24" />
 
       <HowIThink />
 
-      <div className="mx-6 h-px bg-foreground/[0.06] md:mx-16 lg:mx-24" />
+      <div className="mx-6 h-px bg-border md:mx-16 lg:mx-24" />
 
       <Work />
 
-      <div className="mx-6 h-px bg-foreground/[0.06] md:mx-16 lg:mx-24" />
+      <div className="mx-6 h-px bg-border md:mx-16 lg:mx-24" />
 
       <Now />
 
-      <div className="mx-6 h-px bg-foreground/[0.06] md:mx-16 lg:mx-24" />
+      <div className="mx-6 h-px bg-border md:mx-16 lg:mx-24" />
 
       <Contact />
       <Footer />
