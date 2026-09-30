@@ -1,6 +1,6 @@
 "use client"
 
-import { ArrowUpRight, ExternalLink, Github } from "lucide-react"
+import { ExternalLink, Github } from "lucide-react"
 import type { ReactNode } from "react"
 import { Reveal } from "@/components/reveal"
 import { Note } from "@/components/note"
@@ -82,7 +82,7 @@ export function Work() {
         </Reveal>
 
         <div className="flex flex-col gap-28 md:gap-36">
-          {/* ---- 01 · JobAppTracker ---- */}
+          {/* ---- 01 · Toronto Transit Data Platform ---- */}
           <article>
             <Reveal>
               <div className="mb-8 flex items-baseline gap-4">
@@ -90,7 +90,67 @@ export function Work() {
                   01
                 </span>
                 <span className="font-mono text-xs tracking-[0.2em] text-highlight uppercase">
-                  Self-updating job-search command center
+                  TTC delays, with receipts
+                </span>
+              </div>
+            </Reveal>
+
+            <Reveal delay={100}>
+              <h3 className="mb-6 font-serif text-2xl leading-tight font-light text-primary md:text-4xl">
+                Toronto Transit Data Platform
+              </h3>
+            </Reveal>
+
+            <Reveal delay={200}>
+              <div className="mb-8 grid gap-8 md:grid-cols-2 md:gap-12">
+                <p className="text-lg leading-relaxed text-body">
+                  Live data-quality-checked view of Toronto subway delays,
+                  from an open pipeline anyone can rerun.
+                </p>
+                <p className="text-lg leading-relaxed text-body">
+                  Real TTC delay records from Toronto Open Data move through
+                  bronze, silver, and gold layers in DuckDB and dbt. Every
+                  load runs schema, freshness, and volume checks, and the
+                  dashboard publishes the results next to the charts, so a
+                  stale feed can&rsquo;t quietly pose as insight.
+                </p>
+              </div>
+            </Reveal>
+
+            <Reveal delay={250}>
+              <div className="mb-8">
+                <SkillTags
+                  tags={[
+                    "Python · DuckDB · dbt",
+                    "Bronze / silver / gold",
+                    "Data-quality checks",
+                    "Toronto Open Data",
+                  ]}
+                />
+              </div>
+            </Reveal>
+
+            <Reveal delay={300}>
+              <div className="flex flex-wrap items-center gap-8">
+                <ProjectLink
+                  href="https://toronto-transit-data-platform.vercel.app"
+                  icon="demo"
+                >
+                  Live demo
+                </ProjectLink>
+              </div>
+            </Reveal>
+          </article>
+
+          {/* ---- 02 · JobAppTracker ---- */}
+          <article>
+            <Reveal>
+              <div className="mb-8 flex items-baseline gap-4">
+                <span className="font-serif text-3xl font-light text-highlight md:text-4xl">
+                  02
+                </span>
+                <span className="font-mono text-xs tracking-[0.2em] text-highlight uppercase">
+                  Reads your job-search emails and turns applications and interviews into one board that tells you what to do next
                 </span>
               </div>
             </Reveal>
@@ -136,7 +196,7 @@ export function Work() {
             <Reveal delay={300}>
               <div className="mb-10 flex flex-wrap items-center gap-8">
                 <ProjectLink
-                  href="https://aaryan0909.github.io/JobAppTracker-Gmail2Offers/"
+                  href="https://career-decision-board-demo.vercel.app/"
                   icon="demo"
                 >
                   Live demo
@@ -158,7 +218,7 @@ export function Work() {
                   <span className="h-2.5 w-2.5 rounded-full bg-muted-foreground/40" />
                   <span className="h-2.5 w-2.5 rounded-full bg-muted-foreground/40" />
                   <span className="ml-3 truncate font-mono text-[11px] tracking-wider text-muted-foreground">
-                    aaryan0909.github.io/JobAppTracker-Gmail2Offers
+                    career-decision-board-demo.vercel.app
                   </span>
                 </div>
                 <img
@@ -175,12 +235,12 @@ export function Work() {
             </Reveal>
           </article>
 
-          {/* ---- 02 · Recipe Cuisine Atlas ---- */}
+          {/* ---- 03 · Recipe Cuisine Atlas ---- */}
           <article>
             <Reveal>
               <div className="mb-8 flex items-baseline gap-4">
                 <span className="font-serif text-3xl font-light text-highlight md:text-4xl">
-                  02
+                  03
                 </span>
                 <span className="font-mono text-xs tracking-[0.2em] text-highlight uppercase">
                   Interactive food atlas
@@ -199,8 +259,7 @@ export function Work() {
                 <p className="text-lg leading-relaxed text-body">
                   An interactive atlas that maps recipes to the cuisines they
                   belong to &mdash; browse dishes across regions and see what
-                  different cuisines are made of. It&rsquo;s embedded live
-                  below, straight from Replit.
+                  different cuisines are made of.
                 </p>
               </div>
             </Reveal>
@@ -218,48 +277,20 @@ export function Work() {
             </Reveal>
 
             <Reveal delay={300}>
-              <div className="overflow-hidden rounded-sm border border-border">
-                <div className="flex items-center gap-2 border-b border-border bg-card px-4 py-3">
-                  <span className="h-2.5 w-2.5 rounded-full bg-muted-foreground/40" />
-                  <span className="h-2.5 w-2.5 rounded-full bg-muted-foreground/40" />
-                  <span className="h-2.5 w-2.5 rounded-full bg-muted-foreground/40" />
-                  <span className="ml-3 truncate font-mono text-[11px] tracking-wider text-muted-foreground">
-                    replit.com &mdash; Recipe Cuisine Atlas
-                  </span>
-                </div>
-                <iframe
-                  src="https://replit.com/@chawlaaaryan280/Recipe-Cuisine-Atlas?embed=true"
-                  title="Recipe Cuisine Atlas, embedded live from Replit"
-                  loading="lazy"
-                  className="h-[480px] w-full bg-card md:h-[600px]"
-                />
-              </div>
-              <div className="mt-4 flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
-                <p className="font-mono text-[11px] tracking-wider text-muted-foreground">
-                  Embedded live from Replit. If it doesn&rsquo;t load here,
-                  Replit may need you signed in.
-                </p>
-                <a
-                  href="https://replit.com/@chawlaaaryan280/Recipe-Cuisine-Atlas"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group inline-flex items-center gap-2 font-mono text-xs tracking-[0.15em] text-body uppercase transition-colors hover:text-highlight"
-                >
-                  <ArrowUpRight className="h-4 w-4 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
-                  <span className="underline decoration-border underline-offset-4 group-hover:decoration-highlight">
-                    Open the atlas on Replit
-                  </span>
-                </a>
-              </div>
+              <p className="font-mono text-[11px] tracking-wider text-muted-foreground">
+                No public link yet &mdash; the atlas still lives on Replit
+                and is being prepared for publishing. I&rsquo;d rather leave
+                a gap here than send you to a login wall.
+              </p>
             </Reveal>
           </article>
 
-          {/* ---- 03 · EstateMatch-AI ---- */}
+          {/* ---- 04 · EstateMatch-AI ---- */}
           <article>
             <Reveal>
               <div className="mb-8 flex items-baseline gap-4">
                 <span className="font-serif text-3xl font-light text-highlight md:text-4xl">
-                  03
+                  04
                 </span>
                 <span className="font-mono text-xs tracking-[0.2em] text-highlight uppercase">
                   Cynical listing analyzer
@@ -295,6 +326,12 @@ export function Work() {
                     />
                   </div>
                   <div className="flex flex-wrap items-center gap-8">
+                    <ProjectLink
+                      href="https://estatematch-ai-drab.vercel.app/"
+                      icon="demo"
+                    >
+                      Live demo
+                    </ProjectLink>
                     <ProjectLink
                       href="https://github.com/aaryan0909/EstateMatch-AI"
                       icon="github"
