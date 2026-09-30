@@ -1,6 +1,15 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import { ThemeToggle } from "@/components/theme-toggle"
+
+const links = [
+  { label: "Origin", href: "#origin" },
+  { label: "Think", href: "#how-i-think" },
+  { label: "Work", href: "#work" },
+  { label: "Now", href: "#now" },
+  { label: "Contact", href: "#contact" },
+]
 
 export function Nav() {
   const [scrolled, setScrolled] = useState(false)
@@ -14,37 +23,33 @@ export function Nav() {
   return (
     <nav
       className={`fixed top-0 right-0 left-0 z-50 flex items-center justify-between px-6 py-4 transition-all duration-500 md:px-16 lg:px-24 ${
-        scrolled
-          ? "bg-background/80 backdrop-blur-md"
-          : "bg-transparent"
+        scrolled ? "bg-background/80 backdrop-blur-md" : "bg-transparent"
       }`}
     >
-      <span className="font-mono text-xs tracking-widest text-muted-foreground uppercase">
+      <a
+        href="#top"
+        className="font-mono text-xs tracking-widest text-muted-foreground uppercase transition-colors hover:text-highlight"
+      >
         AC
-      </span>
-      <div className="flex gap-6">
-        <a
-          href="https://github.com/aaryan0909"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="font-mono text-xs tracking-wider text-foreground/70 uppercase transition-colors hover:text-highlight"
-        >
-          GitHub
-        </a>
-        <a
-          href="https://www.linkedin.com/in/aaryan-chawla"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="font-mono text-xs tracking-wider text-foreground/70 uppercase transition-colors hover:text-highlight"
-        >
-          LinkedIn
-        </a>
-        <a
-          href="mailto:chawlaaaryan280@gmail.com"
-          className="font-mono text-xs tracking-wider text-foreground/70 uppercase transition-colors hover:text-highlight"
-        >
-          Contact
-        </a>
+      </a>
+      <div className="flex items-center gap-4 md:gap-6">
+        <div className="flex items-center gap-5 md:gap-8">
+          {links.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className={`font-mono text-xs tracking-wider text-body uppercase transition-colors hover:text-highlight ${
+                // Keep the nav compact on small screens: anchors 1,2 collapse away
+                link.href === "#origin" || link.href === "#how-i-think"
+                  ? "hidden sm:inline"
+                  : ""
+              }`}
+            >
+              {link.label}
+            </a>
+          ))}
+        </div>
+        <ThemeToggle />
       </div>
     </nav>
   )
