@@ -20,11 +20,13 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Aaryan Chawla',
-  description: 'Data is the thing running underneath everything. I need to learn how to read it.',
+  title: 'Aaryan Chawla — Data Orchestration Specialist',
+  description:
+    'Data felt like the thing running underneath everything — and I needed to learn how to read it. Aaryan Chawla, Data Orchestration Specialist at Manulife, builds data pipelines and the projects that prove it.',
   openGraph: {
-    title: 'Aaryan Chawla',
-    description: 'Data is the thing running underneath everything. I need to learn how to read it.',
+    title: 'Aaryan Chawla — Data Orchestration Specialist',
+    description:
+      'Data felt like the thing running underneath everything — and I needed to learn how to read it.',
     type: 'website',
   },
 }
