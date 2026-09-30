@@ -1,12 +1,13 @@
 "use client"
 
 import { Reveal } from "@/components/reveal"
+import { Note } from "@/components/note"
 
 export function Origin() {
   return (
     <section id="origin" className="relative scroll-mt-20 px-6 py-32 md:px-16 md:py-40 lg:px-24">
-      {/* Section number as background watermark */}
-      <span className="pointer-events-none absolute top-16 right-6 font-serif text-[12rem] leading-none font-light text-foreground/[0.03] md:right-16 md:text-[20rem] lg:right-24">
+      {/* Section number as background watermark (decorative) */}
+      <span aria-hidden="true" className="pointer-events-none absolute top-16 right-6 font-serif text-[12rem] leading-none font-light text-foreground/[0.03] md:right-16 md:text-[20rem] lg:right-24">
         01
       </span>
 
@@ -29,27 +30,33 @@ export function Origin() {
         {/* Tight paragraphs */}
         <div className="flex flex-col gap-6">
           <Reveal delay={200}>
-            <p className="text-lg leading-relaxed text-foreground/80 md:text-xl">
+            <p className="text-lg leading-relaxed text-body md:text-xl">
               Modi. Trump. I wasn{"'"}t following political science. I was a kid on Instagram watching ideas spark, spread, mutate, and become what everyone believed. Propaganda in real time. Consensus from nowhere. Something invisible shaping what people thought.
             </p>
           </Reveal>
 
           <Reveal delay={300}>
-            <p className="text-lg leading-relaxed text-foreground/80 md:text-xl">
+            <p className="text-lg leading-relaxed text-body md:text-xl">
               I didn{"'"}t know what it was. I just knew it was real. That{"'"}s why I chose data &mdash; not to become an analyst, but because data felt like the layer beneath the headlines, the opinions, the noise.
             </p>
           </Reveal>
         </div>
 
+        <Reveal delay={350}>
+          <Note>
+            I didn{"'"}t have the word propaganda yet. I had the suspicion. The suspicion turned out to be the more useful tool.
+          </Note>
+        </Reveal>
+
         {/* Visual break -- the 50/50 brain */}
         <Reveal delay={400}>
-          <div className="my-16 flex items-start gap-6 border-l-2 border-highlight/40 pl-6">
+          <div className="my-16 flex items-start gap-6 border-l-2 border-highlight pl-6">
             <div>
-              <p className="mb-2 font-mono text-[11px] tracking-[0.2em] text-highlight/70 uppercase">
+              <p className="mb-2 font-mono text-[11px] tracking-[0.2em] text-highlight uppercase">
                 50 / 50
               </p>
-              <p className="text-lg leading-relaxed text-foreground/80 md:text-xl">
-                Tested as a kid: both sides of the brain fire equally &mdash; analytical and creative. I don{"'"}t know if the test was real. I know the feeling is. Never a master of one thing. Always a student of everything.
+              <p className="text-lg leading-relaxed text-body md:text-xl">
+                A test once told me my brain runs 50/50: analytical and creative. The test was probably nonsense. The split is very real. Never a master of one thing. Always a student of everything.
               </p>
             </div>
           </div>
@@ -61,7 +68,7 @@ export function Origin() {
             {["History", "Cooking", "Music", "Football", "Basketball", "Tennis", "Boxing", "Muay Thai"].map((tag) => (
               <span
                 key={tag}
-                className="rounded-sm border border-foreground/[0.08] px-3 py-1.5 font-mono text-[11px] tracking-wider text-foreground/40"
+                className="rounded-sm border border-border px-3 py-1.5 font-mono text-[11px] tracking-wider text-muted-foreground"
               >
                 {tag}
               </span>
@@ -72,7 +79,7 @@ export function Origin() {
         {/* The bridge to now */}
         <div className="flex flex-col gap-6">
           <Reveal delay={600}>
-            <p className="text-lg leading-relaxed text-foreground/80 md:text-xl">
+            <p className="text-lg leading-relaxed text-body md:text-xl">
               In 2021, I moved from Mumbai to Ontario during COVID and built a life anyway. Took that instinct to the University of Waterloo &mdash; Honours Mathematics, one of the most rigorous quant programs in the world. Now I{"'"}m a Data Orchestration Specialist at Manulife, building and running the pipelines that measurement depends on.
             </p>
           </Reveal>

@@ -1,6 +1,7 @@
 "use client"
 
 import { Reveal } from "@/components/reveal"
+import { Note } from "@/components/note"
 
 export function HowIThink() {
   return (
@@ -24,10 +25,10 @@ export function HowIThink() {
         <div className="grid gap-12 md:grid-cols-2 md:gap-16">
           <Reveal delay={200}>
             <div className="flex flex-col gap-4">
-              <h3 className="font-mono text-xs tracking-[0.2em] text-foreground/50 uppercase">
+              <h3 className="font-mono text-xs tracking-[0.2em] text-muted-foreground uppercase">
                 Systems
               </h3>
-              <p className="text-lg leading-relaxed text-foreground/80 md:text-xl">
+              <p className="text-lg leading-relaxed text-body md:text-xl">
                 When something breaks, I don{"'"}t reach for the fix. I reach for the reason. Most people want dashboards. I want to know if the data feeding the dashboard is honest first.
               </p>
             </div>
@@ -35,18 +36,24 @@ export function HowIThink() {
 
           <Reveal delay={300}>
             <div className="flex flex-col gap-4">
-              <h3 className="font-mono text-xs tracking-[0.2em] text-foreground/50 uppercase">
+              <h3 className="font-mono text-xs tracking-[0.2em] text-muted-foreground uppercase">
                 Stories
               </h3>
-              <p className="text-lg leading-relaxed text-foreground/80 md:text-xl">
+              <p className="text-lg leading-relaxed text-body md:text-xl">
                 The 50/50 brain means I never approach a problem from one direction. I can build the model and tell the story about why it matters. I can write the SQL and know which question the business actually needs answered.
               </p>
             </div>
           </Reveal>
         </div>
 
+        <Reveal delay={350}>
+          <Note>
+            Step one is never {"\""}buy a tool.{"\""} Step one is {"\""}show me where the data comes from.{"\""} Tools come later, apologising.
+          </Note>
+        </Reveal>
+
         <Reveal delay={400}>
-          <div className="mt-20 border-t border-foreground/[0.08] pt-8">
+          <div className="mt-20 border-t border-border pt-8">
             <p className="max-w-xl text-xl leading-relaxed text-foreground font-medium md:text-2xl">
               I feel in stories. I think in data. The tension between those two is where everything interesting happens.
             </p>

@@ -15,12 +15,12 @@ export function Hero() {
       id="top"
       className="relative flex min-h-svh flex-col justify-end px-6 pb-16 pt-24 md:px-16 lg:px-24"
     >
-      {/* Ambient glow */}
+      {/* Ambient glow (decorative) */}
       <div className="pointer-events-none absolute top-0 left-1/4 h-[600px] w-[600px] rounded-full bg-highlight/[0.03] blur-[120px]" />
 
       <div className="relative flex flex-col gap-6">
         <p
-          className={`font-mono text-[11px] tracking-[0.3em] text-foreground/40 uppercase transition-all duration-700 ${
+          className={`font-mono text-[11px] tracking-[0.3em] text-muted-foreground uppercase transition-all duration-700 ${
             isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
           }`}
         >
@@ -45,7 +45,7 @@ export function Hero() {
 
         {/* The facts, before the philosophy */}
         <p
-          className={`font-mono text-[11px] tracking-[0.2em] text-foreground/60 uppercase transition-all duration-1000 delay-[550ms] ease-out ${
+          className={`font-mono text-[11px] tracking-[0.2em] text-muted-foreground uppercase transition-all duration-1000 delay-[550ms] ease-out ${
             isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
           }`}
         >
@@ -54,12 +54,12 @@ export function Hero() {
         </p>
 
         <p
-          className={`max-w-lg text-lg leading-relaxed text-foreground/70 md:text-xl transition-all duration-1000 delay-600 ease-out ${
+          className={`max-w-lg text-lg leading-relaxed text-body md:text-xl transition-all duration-1000 delay-600 ease-out ${
             isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
           }`}
         >
           Data felt like the thing running underneath everything &mdash;{" "}
-          <span className="text-foreground/90">
+          <span className="text-foreground">
             and I needed to learn how to read it.
           </span>
         </p>
@@ -69,8 +69,8 @@ export function Hero() {
             isVisible ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
           }`}
         >
-          <div className="h-8 w-px animate-pulse bg-highlight/60" />
-          <span className="font-mono text-[10px] tracking-[0.2em] text-foreground/30 uppercase">
+          <div className="h-8 w-px animate-pulse bg-highlight" />
+          <span className="font-mono text-[10px] tracking-[0.2em] text-muted-foreground uppercase">
             Scroll
           </span>
         </div>

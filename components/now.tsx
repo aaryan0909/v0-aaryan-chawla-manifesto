@@ -1,6 +1,7 @@
 "use client"
 
 import { Reveal } from "@/components/reveal"
+import { Note } from "@/components/note"
 
 export function Now() {
   return (
@@ -20,7 +21,7 @@ export function Now() {
         </Reveal>
 
         <Reveal delay={200}>
-          <p className="mb-16 max-w-2xl text-lg leading-relaxed text-foreground/80 md:text-xl">
+          <p className="mb-16 max-w-2xl text-lg leading-relaxed text-body md:text-xl">
             I{"'"}m a Data Orchestration Specialist on Manulife{"'"}s Global
             Digital Marketing Measurement &amp; Insights team in Toronto —
             building and running the data pipelines (Databricks, Adobe
@@ -28,6 +29,12 @@ export function Now() {
             When the intake data is broken, I{"'"}d rather have the
             uncomfortable conversation than build a dashboard on it.
           </p>
+        </Reveal>
+
+        <Reveal delay={250}>
+          <Note>
+            Unglamorous work. It is also the work every confident number in the building quietly depends on.
+          </Note>
         </Reveal>
 
         {/* The manifesto statement */}

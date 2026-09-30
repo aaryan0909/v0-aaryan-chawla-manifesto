@@ -2,6 +2,7 @@
 
 import { ArrowUpRight } from "lucide-react"
 import { Reveal } from "@/components/reveal"
+import { Note } from "@/components/note"
 
 export function Contact() {
   return (
@@ -19,11 +20,11 @@ export function Contact() {
               we should probably talk.
             </h2>
 
-            <p className="mb-12 max-w-lg text-lg leading-relaxed text-foreground/80 md:text-xl">
+            <p className="mb-12 max-w-lg text-lg leading-relaxed text-body md:text-xl">
               Reach me at{" "}
               <a
                 href="mailto:chawlaaaryan280@gmail.com"
-                className="text-foreground underline decoration-foreground/30 underline-offset-4 transition-colors hover:text-highlight hover:decoration-highlight"
+                className="text-foreground underline decoration-border underline-offset-4 transition-colors hover:text-highlight hover:decoration-highlight"
               >
                 chawlaaaryan280@gmail.com
               </a>
@@ -32,7 +33,7 @@ export function Contact() {
                 href="https://www.linkedin.com/in/aaryan-chawla"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-foreground underline decoration-foreground/30 underline-offset-4 transition-colors hover:text-highlight hover:decoration-highlight"
+                className="text-foreground underline decoration-border underline-offset-4 transition-colors hover:text-highlight hover:decoration-highlight"
               >
                 LinkedIn
               </a>.
@@ -52,7 +53,7 @@ export function Contact() {
                   href="https://github.com/aaryan0909"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-mono text-sm tracking-[0.15em] text-foreground/70 uppercase transition-colors hover:text-highlight"
+                  className="font-mono text-sm tracking-[0.15em] text-body uppercase transition-colors hover:text-highlight"
                 >
                   GitHub
                 </a>
@@ -60,15 +61,19 @@ export function Contact() {
                   href="https://www.linkedin.com/in/aaryan-chawla"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-mono text-sm tracking-[0.15em] text-foreground/70 uppercase transition-colors hover:text-highlight"
+                  className="font-mono text-sm tracking-[0.15em] text-body uppercase transition-colors hover:text-highlight"
                 >
                   LinkedIn
                 </a>
               </div>
             </div>
 
+            <Note>
+              No contact form, deliberately. Forms are where good messages go to be ignored.
+            </Note>
+
             {/* Sign-off */}
-            <p className="mt-20 font-serif text-base text-foreground/40 italic md:text-lg">
+            <p className="mt-20 font-serif text-base text-muted-foreground italic md:text-lg">
               Still chasing the thing underneath. Always will be.
             </p>
           </div>
