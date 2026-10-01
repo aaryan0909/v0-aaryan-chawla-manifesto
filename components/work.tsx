@@ -100,6 +100,16 @@ const projects: Project[] = [
     demoHref: "https://estatematch-ai-drab.vercel.app/",
     githubHref: "https://github.com/aaryan0909/EstateMatch-AI",
   },
+  {
+    number: "05",
+    kicker: "An office for AI agents",
+    title: "Agent Office",
+    description:
+      "A playable model of the office my AI agents work in, desks, statuses, and coffee breaks included.",
+    tags: ["AI agents", "Character UI", "Activity feed"],
+    demoHref: "https://agent-office-tawny.vercel.app",
+    githubHref: "https://github.com/aaryan0909/agent-office",
+  },
 ]
 
 export function Work() {
