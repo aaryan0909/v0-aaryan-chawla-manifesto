@@ -1,6 +1,6 @@
 "use client"
 
-import { ExternalLink, Github } from "lucide-react"
+import { ArrowUpRight, ExternalLink, Github } from "lucide-react"
 import type { ReactNode } from "react"
 import { Reveal } from "@/components/reveal"
 import { Note } from "@/components/note"
@@ -19,32 +19,17 @@ function ProjectLink({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="group inline-flex items-center gap-2 font-mono text-xs tracking-[0.15em] text-body uppercase transition-colors hover:text-highlight"
+      className="group/link relative z-10 inline-flex items-center gap-2 font-mono text-xs tracking-[0.15em] text-body uppercase transition-colors hover:text-highlight"
     >
       {icon === "github" ? (
         <Github className="h-4 w-4" />
       ) : (
         <ExternalLink className="h-4 w-4" />
       )}
-      <span className="underline decoration-border underline-offset-4 group-hover:decoration-highlight">
+      <span className="underline decoration-border underline-offset-4 group-hover/link:decoration-highlight">
         {children}
       </span>
     </a>
-  )
-}
-
-function SkillTags({ tags }: { tags: string[] }) {
-  return (
-    <div className="flex flex-wrap gap-2.5">
-      {tags.map((tag) => (
-        <span
-          key={tag}
-          className="rounded-sm border border-border px-3 py-1.5 font-mono text-[11px] tracking-wider whitespace-nowrap text-muted-foreground"
-        >
-          {tag}
-        </span>
-      ))}
-    </div>
   )
 }
 
@@ -53,7 +38,7 @@ type Project = {
   kicker: string
   title: string
   description: string
-  tags: string[]
+  stat?: { value: string; label: string }
   demoHref?: string
   githubHref?: string
   unavailableNote?: string
@@ -66,7 +51,7 @@ const projects: Project[] = [
     title: "Toronto Transit Data Platform",
     description:
       "Live data-quality-checked view of Toronto subway delays, from an open pipeline anyone can rerun.",
-    tags: ["Python", "DuckDB · dbt", "Data-quality checks"],
+    stat: { value: "71,942", label: "delay records, quality-checked" },
     demoHref: "https://toronto-transit-data-platform.vercel.app",
     githubHref: "https://github.com/aaryan0909/aryan0909-toronto-transit-data-platfor",
   },
@@ -76,7 +61,6 @@ const projects: Project[] = [
     title: "Career Decision Board",
     description:
       "Reads your job-search emails and turns applications and interviews into one board that tells you what to do next.",
-    tags: ["Python", "Gmail ingestion", "Idempotent scans"],
     demoHref: "https://career-decision-board-demo.vercel.app/",
     githubHref: "https://github.com/aaryan0909/JobAppTracker-Gmail2Offers",
   },
@@ -86,7 +70,7 @@ const projects: Project[] = [
     title: "Recipe Cuisine Atlas",
     description:
       "Follow chili, tomato, potato, coffee, and sugar across the world through history, then explore 472 recipes by cuisine and ingredient.",
-    tags: ["React", "D3", "Food data"],
+    stat: { value: "472", label: "recipes, 29 cuisines" },
     demoHref: "https://recipe-atlas-taupe.vercel.app",
     githubHref: "https://github.com/aaryan0909/recipe-atlas",
   },
@@ -96,7 +80,6 @@ const projects: Project[] = [
     title: "EstateMatch-AI",
     description:
       "Paste a listing and get its red flags, hidden costs, and a match score against what you actually want.",
-    tags: ["TypeScript", "React", "Gemini"],
     demoHref: "https://estatematch-ai-drab.vercel.app/",
     githubHref: "https://github.com/aaryan0909/EstateMatch-AI",
   },
@@ -106,7 +89,7 @@ const projects: Project[] = [
     title: "Agent Office",
     description:
       "A playable model of the office my AI agents work in, desks, statuses, and coffee breaks included.",
-    tags: ["AI agents", "Character UI", "Activity feed"],
+    stat: { value: "12", label: "named agents, each with a job" },
     demoHref: "https://agent-office-tawny.vercel.app",
     githubHref: "https://github.com/aaryan0909/agent-office",
   },
@@ -140,55 +123,79 @@ export function Work() {
           </Note>
         </Reveal>
 
-        <div className="flex flex-col">
-          {projects.map((project, index) => (
-            <article
-              key={project.number}
-              className="border-t border-border py-10 first:mt-4 md:py-12"
-            >
-              <Reveal delay={Math.min(index * 75, 225)}>
-                <div className="mb-5 flex items-baseline gap-4">
-                  <span className="font-serif text-3xl font-light text-highlight">
-                    {project.number}
-                  </span>
-                  <span className="font-mono text-xs tracking-[0.2em] text-highlight uppercase">
-                    {project.kicker}
-                  </span>
-                </div>
+        <div className="mt-10 flex flex-col gap-6 md:gap-8">
+          {projects.map((project, index) => {
+            const titleHref = project.demoHref ?? project.githubHref
+            return (
+              <article
+                key={project.number}
+                className="group relative rounded-md border border-border bg-card p-6 shadow-sm transition-colors hover:border-highlight md:p-10"
+              >
+                <Reveal delay={Math.min(index * 75, 225)}>
+                  <div className="mb-5 flex items-start justify-between gap-6">
+                    <div className="flex items-baseline gap-4">
+                      <span className="font-serif text-3xl font-light text-highlight">
+                        {project.number}
+                      </span>
+                      <span className="font-mono text-xs tracking-[0.2em] text-highlight uppercase">
+                        {project.kicker}
+                      </span>
+                    </div>
 
-                <h3 className="mb-4 font-serif text-2xl leading-tight font-light text-primary md:text-4xl">
-                  {project.title}
-                </h3>
-
-                <p className="mb-6 max-w-3xl text-lg leading-relaxed text-body">
-                  {project.description}
-                </p>
-
-                <div className="mb-7">
-                  <SkillTags tags={project.tags} />
-                </div>
-
-                {project.unavailableNote ? (
-                  <p className="max-w-2xl font-mono text-[11px] leading-relaxed tracking-wider text-muted-foreground">
-                    {project.unavailableNote}
-                  </p>
-                ) : (
-                  <div className="flex flex-wrap items-center gap-8">
-                    {project.demoHref ? (
-                      <ProjectLink href={project.demoHref} icon="demo">
-                        Live demo
-                      </ProjectLink>
-                    ) : null}
-                    {project.githubHref ? (
-                      <ProjectLink href={project.githubHref} icon="github">
-                        GitHub
-                      </ProjectLink>
+                    {project.stat ? (
+                      <div className="shrink-0 text-right">
+                        <p className="font-serif text-3xl leading-none font-light text-highlight md:text-4xl">
+                          {project.stat.value}
+                        </p>
+                        <p className="mt-2 font-mono text-[10px] tracking-[0.15em] text-muted-foreground uppercase">
+                          {project.stat.label}
+                        </p>
+                      </div>
                     ) : null}
                   </div>
-                )}
-              </Reveal>
-            </article>
-          ))}
+
+                  <h3 className="mb-4 font-serif text-3xl leading-tight font-light text-primary md:text-5xl">
+                    {titleHref ? (
+                      <a
+                        href={titleHref}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="transition-colors after:absolute after:inset-0 group-hover:text-highlight"
+                      >
+                        {project.title}
+                        <ArrowUpRight className="ml-2 inline-block h-7 w-7 align-baseline text-highlight transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 md:h-9 md:w-9" />
+                      </a>
+                    ) : (
+                      project.title
+                    )}
+                  </h3>
+
+                  <p className="mb-8 max-w-3xl text-lg leading-relaxed text-body">
+                    {project.description}
+                  </p>
+
+                  {project.unavailableNote ? (
+                    <p className="max-w-2xl font-mono text-[11px] leading-relaxed tracking-wider text-muted-foreground">
+                      {project.unavailableNote}
+                    </p>
+                  ) : (
+                    <div className="flex flex-wrap items-center gap-8">
+                      {project.demoHref ? (
+                        <ProjectLink href={project.demoHref} icon="demo">
+                          Live demo
+                        </ProjectLink>
+                      ) : null}
+                      {project.githubHref ? (
+                        <ProjectLink href={project.githubHref} icon="github">
+                          GitHub
+                        </ProjectLink>
+                      ) : null}
+                    </div>
+                  )}
+                </Reveal>
+              </article>
+            )
+          })}
         </div>
       </div>
     </section>
